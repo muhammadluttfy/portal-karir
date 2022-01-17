@@ -95,7 +95,7 @@
                 <div class="navbar-nav-wrap">
                     <!-- Logo -->
                     <a class="navbar-brand navbar-nav-wrap-brand" href="{{ route('welcome') }}" aria-label="Front">
-                        <img src="/template-assets/svg/logos/logo.svg" alt="Logo">
+                        <img src="/template-assets/img/logos/portalkarir.svg" alt="Logo">
                     </a>
                     <!-- End Logo -->
 
@@ -178,194 +178,46 @@
                             <li class="hs-has-sub-menu navbar-nav-item">
                                 <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link" href="javascript:;"
                                     aria-haspopup="true" aria-expanded="false" aria-labelledby="coursesSubMenu">
-                                    <i class="fa fa-th font-size-1 mr-1"></i> Courses
+                                    <i class="fa fa-th font-size-1 mr-1"></i> Topik
                                 </a>
 
                                 <!-- Courses - Submenu -->
                                 <div id="coursesSubMenu" class="hs-sub-menu dropdown-menu"
                                     aria-labelledby="coursesMegaMenu" style="min-width: 270px;">
-                                    <!-- Development -->
+                                    <!-- Topic -->
                                     <div class="hs-has-sub-menu">
-                                        <a id="navLinkCoursesDevelopment"
-                                            class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                            href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                            aria-controls="navSubmenuCoursesDevelopment">
-                                            <span class="min-w-4rem text-center opacity-lg mr-1">
-                                                <i class="fa fa-laptop-code font-size-1 mr-1"></i>
-                                            </span> Development
-                                        </a>
+                                        @foreach ($categories as $category)
+                                            <a id="navLinkCoursesDevelopment"
+                                                class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
+                                                href="/careers?category={{ $category->slug }}" aria-haspopup="true"
+                                                aria-expanded="false" aria-controls="navSubmenuCoursesDevelopment">
+                                                <span class="min-w-4rem text-center opacity-lg mr-1">
+                                                    <i class="{{ $category->icon }} font-size-1 mr-1"></i>
+                                                </span> {{ $category->name }}
+                                            </a>
+                                        @endforeach
 
                                         <div id="navSubmenuCoursesDevelopment" class="hs-sub-menu dropdown-menu"
                                             aria-labelledby="navLinkCoursesDevelopment" style="min-width: 270px;">
-                                            <a class="dropdown-item" href="#">All Web Development</a>
+                                            <a class="dropdown-item" href="#">Comingsoon :)</a>
+                                            {{-- <a class="dropdown-item" href="#">All Web Development</a>
                                             <a class="dropdown-item" href="#">Web Development</a>
                                             <a class="dropdown-item" href="#">Mobile apps</a>
                                             <a class="dropdown-item" href="#">Programming languages</a>
                                             <a class="dropdown-item" href="#">Game development</a>
                                             <a class="dropdown-item" href="#">Databases</a>
                                             <a class="dropdown-item" href="#">Software testing</a>
-                                            <a class="dropdown-item" href="#">Other</a>
+                                            <a class="dropdown-item" href="#">Other</a> --}}
                                         </div>
                                     </div>
-                                    <!-- End Development -->
-
-                                    <!-- Business -->
-                                    <div class="hs-has-sub-menu">
-                                        <a id="navLinkCoursesBusiness"
-                                            class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                            href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                            aria-controls="navSubmenuCoursesBusiness">
-                                            <span class="min-w-4rem text-center opacity-lg mr-1">
-                                                <i class="fa fa-chart-bar font-size-1 mr-1"></i>
-                                            </span> Business
-                                        </a>
-
-                                        <div id="navSubmenuCoursesBusiness" class="hs-sub-menu dropdown-menu"
-                                            aria-labelledby="navLinkCoursesBusiness" style="min-width: 270px;">
-                                            <a class="dropdown-item" href="#">All Business</a>
-                                            <a class="dropdown-item" href="#">Finance</a>
-                                            <a class="dropdown-item" href="#">Entrepreneurship</a>
-                                            <a class="dropdown-item" href="#">Communications</a>
-                                            <a class="dropdown-item" href="#">Management</a>
-                                            <a class="dropdown-item" href="#">Sales</a>
-                                            <a class="dropdown-item" href="#">Strategy</a>
-                                            <a class="dropdown-item" href="#">Operations</a>
-                                            <a class="dropdown-item" href="#">Project management</a>
-                                            <a class="dropdown-item" href="#">Business law</a>
-                                            <a class="dropdown-item" href="#">Data &amp; Analytics</a>
-                                            <a class="dropdown-item" href="#">Other</a>
-                                        </div>
-                                    </div>
-                                    <!-- Business -->
-
-                                    <!-- Finance & Accounting -->
-                                    <div class="hs-has-sub-menu">
-                                        <a id="navLinkCoursesFinanceAccounting"
-                                            class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                            href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                            aria-controls="navSubmenuCoursesFinanceAccounting">
-                                            <span class="min-w-4rem text-center opacity-lg mr-1">
-                                                <i class="fa fa-wallet font-size-1 mr-1"></i>
-                                            </span> Finance &amp; Accounting
-                                        </a>
-
-                                        <div id="navSubmenuCoursesFinanceAccounting" class="hs-sub-menu dropdown-menu"
-                                            aria-labelledby="navLinkCoursesFinanceAccounting" style="min-width: 270px;">
-                                            <a class="dropdown-item" href="#">All Finance &amp; Accounting</a>
-                                            <a class="dropdown-item" href="#">Accounting &amp; Bookkeeping</a>
-                                            <a class="dropdown-item" href="#">Compliance</a>
-                                            <a class="dropdown-item" href="#">Economics</a>
-                                            <a class="dropdown-item" href="#">Finance</a>
-                                            <a class="dropdown-item" href="#">Other</a>
-                                        </div>
-                                    </div>
-                                    <!-- End Finance & Accounting -->
-
-                                    <!-- IT & Software -->
-                                    <div class="hs-has-sub-menu">
-                                        <a id="navLinkCoursesITSoftware"
-                                            class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                            href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                            aria-controls="navSubmenuCoursesITSoftware">
-                                            <span class="min-w-4rem text-center opacity-lg mr-1">
-                                                <i class="fa fa-desktop font-size-1 mr-1"></i>
-                                            </span> IT &amp; Software
-                                        </a>
-
-                                        <div id="navSubmenuCoursesITSoftware" class="hs-sub-menu dropdown-menu"
-                                            aria-labelledby="navLinkCoursesITSoftware" style="min-width: 270px;">
-                                            <a class="dropdown-item" href="#">All IT &amp; Software</a>
-                                            <a class="dropdown-item" href="#">IT Sertification</a>
-                                            <a class="dropdown-item" href="#">Network &amp; security</a>
-                                            <a class="dropdown-item" href="#">Hardware</a>
-                                            <a class="dropdown-item" href="#">Operating systems</a>
-                                            <a class="dropdown-item" href="#">Other</a>
-                                        </div>
-                                    </div>
-                                    <!-- IT & Software -->
-
-                                    <!-- Design -->
-                                    <div class="hs-has-sub-menu">
-                                        <a id="navLinkDesignServices"
-                                            class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                            href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                            aria-controls="navSubmenuDesignServices">
-                                            <span class="min-w-4rem text-center opacity-lg mr-1">
-                                                <i class="fa fa-pencil-ruler font-size-1 mr-1"></i>
-                                            </span> Design
-                                        </a>
-
-                                        <div id="navSubmenuDesignServices" class="hs-sub-menu dropdown-menu"
-                                            aria-labelledby="navLinkDesignServices" style="min-width: 270px;">
-                                            <a class="dropdown-item" href="#">All Design</a>
-                                            <a class="dropdown-item" href="#">Web design</a>
-                                            <a class="dropdown-item" href="#">Graphic design</a>
-                                            <a class="dropdown-item" href="#">Design tools</a>
-                                            <a class="dropdown-item" href="#">User experience</a>
-                                            <a class="dropdown-item" href="#">Game design</a>
-                                            <a class="dropdown-item" href="#">Design thinking</a>
-                                            <a class="dropdown-item" href="#">3D &amp; animation</a>
-                                            <a class="dropdown-item" href="#">Fashion</a>
-                                            <a class="dropdown-item" href="#">Architectural design</a>
-                                            <a class="dropdown-item" href="#">Interior design</a>
-                                            <a class="dropdown-item" href="#">Other</a>
-                                        </div>
-                                    </div>
-                                    <!-- Design -->
-
-                                    <!-- Marketing -->
-                                    <div class="hs-has-sub-menu">
-                                        <a id="navLinkCoursesMarketing"
-                                            class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                            href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                            aria-controls="navSubmenuCoursesMarketing">
-                                            <span class="min-w-4rem text-center opacity-lg mr-1">
-                                                <i class="fa fa-mail-bulk font-size-1 mr-1"></i>
-                                            </span> Marketing
-                                        </a>
-
-                                        <div id="navSubmenuCoursesMarketing" class="hs-sub-menu dropdown-menu"
-                                            aria-labelledby="navLinkCoursesMarketing" style="min-width: 270px;">
-                                            <a class="dropdown-item" href="#">All Marketing</a>
-                                            <a class="dropdown-item" href="#">Digital marketing</a>
-                                            <a class="dropdown-item" href="#">Branding</a>
-                                            <a class="dropdown-item" href="#">Advertising</a>
-                                            <a class="dropdown-item" href="#">Other</a>
-                                        </div>
-                                    </div>
-                                    <!-- Marketing -->
-
-                                    <!-- Music -->
-                                    <div class="hs-has-sub-menu">
-                                        <a id="navLinkCoursesMusic"
-                                            class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle"
-                                            href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                            aria-controls="navSubmenuCoursesMusic">
-                                            <span class="min-w-4rem text-center opacity-lg mr-1">
-                                                <i class="fa fa-music font-size-1 mr-1"></i>
-                                            </span> Music
-                                        </a>
-
-                                        <div id="navSubmenuCoursesMusic" class="hs-sub-menu dropdown-menu"
-                                            aria-labelledby="navLinkCoursesMusic" style="min-width: 270px;">
-                                            <a class="dropdown-item" href="#">All Musics</a>
-                                            <a class="dropdown-item" href="#">Instrument</a>
-                                            <a class="dropdown-item" href="#">Production</a>
-                                            <a class="dropdown-item" href="#">Music fundamentals</a>
-                                            <a class="dropdown-item" href="#">Vocal</a>
-                                            <a class="dropdown-item" href="#">Music techniques</a>
-                                            <a class="dropdown-item" href="#">Music software</a>
-                                            <a class="dropdown-item" href="#">Other</a>
-                                        </div>
-                                    </div>
-                                    <!-- Music -->
+                                    <!-- End Topic -->
 
                                     <div class="dropdown-divider my-3"></div>
 
                                     <div class="px-4">
                                         <a class="btn btn-block btn-sm btn-primary transition-3d-hover"
-                                            href="courses-listing.html">All
-                                            Courses</a>
+                                            href="{{ route('careers') }}">All
+                                            Careers</a>
                                     </div>
                                 </div>
                                 <!-- End Courses - Submenu -->
@@ -374,8 +226,7 @@
 
                             <!-- Search Form -->
                             <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 mx-2">
-                                <form action="/posts" class="input-group input-group-sm input-group-merge w-75">
-
+                                {{-- <form action="/careers" class="input-group input-group-sm input-group-merge w-75">
                                     @if (request('category'))
                                         <input type="hidden" name="category" value="{{ request('category') }}">
                                     @endif
@@ -391,7 +242,28 @@
                                     </div>
                                     <input type="text" class="form-control" placeholder="What do you want to learn?"
                                         aria-label="What do you want to learn?">
+                                    <button class="btn" type="submit">Search</button>
+                                </form> --}}
 
+                                <form action="/careers" lass="js-validate d-flex align-items-center">
+
+                                    @if (request('category'))
+                                        <input type="hidden" name="category" value="{{ request('category') }}">
+                                    @endif
+
+                                    @if (request('author'))
+                                        <input type="hidden" name="author" value="{{ request('author') }}">
+                                    @endif
+
+                                    <label class="sr-only" for="search">What do you want to learn?</label>
+                                    <div class="d-inline-block w-75 mr-2">
+                                        <input type="tesxt" class="form-control" name="search" id="search"
+                                            placeholder="What do you want to learn?"
+                                            aria-label="What do you want to learn?">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">
+                                        <span class="fas fa-search"></span>
+                                    </button>
                                 </form>
                             </li>
                             <!-- End Search Form -->
@@ -403,8 +275,8 @@
                                     aria-labelledby="pagesSubMenu">Pages</a>
 
                                 <!-- Pages - Submenu -->
-                                <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu"
-                                    aria-labelledby="pagesMegaMenu" style="min-width: 230px;">
+                                <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="pagesMegaMenu"
+                                    style="min-width: 230px;">
                                     <a class="dropdown-item" href="courses-listing.html">Courses</a>
                                     <a class="dropdown-item" href="course-description.html">Course description</a>
                                     <a class="dropdown-item" href="author.html">Author</a>

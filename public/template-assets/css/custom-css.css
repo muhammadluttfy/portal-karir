@@ -2,6 +2,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #34364A !important;
 }
 
+label {
+  font-size: 16px !important;
+  font-weight: 600;
+}
+
 .decrtiption-heading {
   font-size: 20px;
   font-weight: 700 !important;

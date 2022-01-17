@@ -3,7 +3,7 @@
 
 <head>
     <!-- Title -->
-    <title>Course | Front - Responsive Website Template</title>
+    <title>Portal Karir - Find the right learning path for you</title>
 
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">

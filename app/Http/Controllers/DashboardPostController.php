@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Tool;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
@@ -35,6 +36,7 @@ class DashboardPostController extends Controller
   {
     return view('dashboard.posts.create', [
       'categories' => Category::all(),
+      'tools' => Tool::all(),
     ]);
   }
 
@@ -51,6 +53,8 @@ class DashboardPostController extends Controller
       'title' => 'required|max:255',
       'slug' => 'required|unique:posts',
       'category_id' => 'required',
+      'salary' => 'required|numeric',
+      'salary_source' => 'required|max:255',
       'image' => 'image|file|max:3024',
       'body' => 'required',
     ]);
@@ -60,7 +64,7 @@ class DashboardPostController extends Controller
     }
 
     $validatedData['user_id'] = auth()->user()->id;
-    $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
+    $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 100);
 
     Post::create($validatedData);
 
@@ -90,7 +94,8 @@ class DashboardPostController extends Controller
   {
     return view('dashboard.posts.edit', [
       'post' => $post,
-      'categories' => Category::all()
+      'categories' => Category::all(),
+      'tools' => Tool::all(),
     ]);
   }
 
@@ -105,7 +110,10 @@ class DashboardPostController extends Controller
   {
     $rules = [
       'title' => 'required|max:255',
+      'slug' => 'required|unique:posts',
       'category_id' => 'required',
+      'salary' => 'required|numeric',
+      'salary_source' => 'required|max:255',
       'image' => 'image|file|max:3024',
       'body' => 'required',
     ];

@@ -30,8 +30,13 @@
                 <div class="mr-lg-2">
                     <div class="mb-7">
                         <div class="card-frame rounded text-center mx-auto mb-3">
-                            <img class="img-fluid" src="/template-assets/img/160x160/img23.png" alt="Image Description"
-                                width="130">
+                            @if ($post->image)
+                                <img class="img-fluid" src="{{ asset('storage/' . $post->image) }}"
+                                    alt="Image Description" width="130">
+                            @else
+                                <img class="img-fluid" src="https://source.unsplash.com/{{ $post->category->name }}"
+                                    alt="Image Description" width="130">
+                            @endif
                         </div>
 
                         {{-- <a class="btn btn-sm btn-block btn-primary transition-3d-hover" href="#">Install Now</a> --}}

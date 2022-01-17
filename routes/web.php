@@ -25,7 +25,7 @@ Route::get('/', function () {
     "title" => "Temukan Karir Masa Depanmu",
     "active" => 'welcome',
     'categories' => Category::all(),
-    "posts" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(7)->withQueryString(),
+    "posts" => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(6)->withQueryString(),
   ]);
 })->name('welcome');
 
@@ -39,7 +39,7 @@ Route::get('/about', function () {
   ]);
 });
 
-Route::get('/careers', [PostController::class, 'index']);
+Route::get('/careers', [PostController::class, 'index'])->name('careers');
 Route::get('careers/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/categories', function () {

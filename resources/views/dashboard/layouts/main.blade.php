@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/dashboard.css" rel="stylesheet">
+    <link href="/template-assets/css/custom-css.css" rel="stylesheet">
 
     {{-- trix Editor --}}
     <link rel="stylesheet" type="text/css" href="/css/trix.css">

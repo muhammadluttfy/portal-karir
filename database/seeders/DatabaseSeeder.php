@@ -38,35 +38,42 @@ class DatabaseSeeder extends Seeder
     User::factory(3)->create();
 
     Category::create([
-      'name' => 'Web Development',
-      'slug' => 'web-development'
+      'name' => 'Development',
+      'slug' => 'development',
+      'icon' => 'fa fa-laptop-code',
     ]);
 
     Category::create([
       'name' => 'Business',
-      'slug' => 'business'
+      'slug' => 'business',
+      'icon' => 'fa fa-chart-bar',
     ]);
 
     Category::create([
       'name' => 'Finance & Aounting',
-      'slug' => 'finance-and-accounting'
+      'slug' => 'finance-and-accounting',
+      'icon' => 'fa fa-wallet',
     ]);
 
     Category::create([
       'name' => 'IT & Software',
-      'slug' => 'it-and-software'
+      'slug' => 'it-and-software',
+      'icon' => 'fa fa-desktop',
     ]);
     Category::create([
       'name' => 'Design',
-      'slug' => 'design'
+      'slug' => 'design',
+      'icon' => 'fa fa-pencil-ruler',
     ]);
     Category::create([
       'name' => 'Marketing',
-      'slug' => 'marketing'
+      'slug' => 'marketing',
+      'icon' => 'fa fa-mail-bulk',
     ]);
     Category::create([
       'name' => 'Music',
-      'slug' => 'music'
+      'slug' => 'music',
+      'icon' => 'fa fa-music',
     ]);
 
 

@@ -33,15 +33,16 @@
 
                         <!-- Fancybox -->
                         <a class="js-fancybox video-player video-player-btn media align-items-center text-dark mb-2"
-                            href="javascript:;" data-hs-fancybox-options='{
-                                                                                                                   "src": "//youtube.com/0qisGSwZym4",
-                                                                                                                   "caption": "Front - Responsive Website Template",
-                                                                                                                   "speed": 700,
-                                                                                                                   "buttons": ["fullScreen", "close"],
-                                                                                                                   "youtube": {
-                                                                                                                     "autoplay": 1
-                                                                                                                   }
-                                                                                                                 }'>
+                            href="javascript:;"
+                            data-hs-fancybox-options='{
+                                                                                                                                                               "src": "//youtube.com/0qisGSwZym4",
+                                                                                                                                                               "caption": "Front - Responsive Website Template",
+                                                                                                                                                               "speed": 700,
+                                                                                                                                                               "buttons": ["fullScreen", "close"],
+                                                                                                                                                               "youtube": {
+                                                                                                                                                                 "autoplay": 1
+                                                                                                                                                               }
+                                                                                                                                                             }'>
                             <span class="video-player-icon shadow-soft mr-3">
                                 <i class="fa fa-play"></i>
                             </span>
@@ -75,32 +76,32 @@
 
                     <div class="js-slick-carousel slick slick-equal-height slick-gutters-3 slick-center-mode-right slick-center-mode-right-offset"
                         data-hs-slick-carousel-options='{
-                                                                                                                   "prevArrow": "<span class=\"fa fa-arrow-left slick-arrow slick-arrow-primary-white slick-arrow-left slick-arrow-centered-y shadow-soft rounded-circle ml-sm-n2\"></span>",
-                                                                                                                   "nextArrow": "<span class=\"fa fa-arrow-right slick-arrow slick-arrow-primary-white slick-arrow-right slick-arrow-centered-y shadow-soft rounded-circle mr-sm-2 mr-xl-4\"></span>",
-                                                                                                                   "slidesToShow": 5,
-                                                                                                                   "infinite": true,
-                                                                                                                   "responsive": [{
-                                                                                                                     "breakpoint": 1200,
-                                                                                                                       "settings": {
-                                                                                                                         "slidesToShow": 4
-                                                                                                                       }
-                                                                                                                     }, {
-                                                                                                                     "breakpoint": 992,
-                                                                                                                       "settings": {
-                                                                                                                         "slidesToShow": 3
-                                                                                                                       }
-                                                                                                                     }, {
-                                                                                                                     "breakpoint": 768,
-                                                                                                                     "settings": {
-                                                                                                                       "slidesToShow": 2
-                                                                                                                     }
-                                                                                                                     }, {
-                                                                                                                     "breakpoint": 554,
-                                                                                                                     "settings": {
-                                                                                                                       "slidesToShow": 1
-                                                                                                                     }
-                                                                                                                   }]
-                                                                                                                 }'>
+                                                                                                                                                               "prevArrow": "<span class=\"fa fa-arrow-left slick-arrow slick-arrow-primary-white slick-arrow-left slick-arrow-centered-y shadow-soft rounded-circle ml-sm-n2\"></span>",
+                                                                                                                                                               "nextArrow": "<span class=\"fa fa-arrow-right slick-arrow slick-arrow-primary-white slick-arrow-right slick-arrow-centered-y shadow-soft rounded-circle mr-sm-2 mr-xl-4\"></span>",
+                                                                                                                                                               "slidesToShow": 5,
+                                                                                                                                                               "infinite": true,
+                                                                                                                                                               "responsive": [{
+                                                                                                                                                                 "breakpoint": 1200,
+                                                                                                                                                                   "settings": {
+                                                                                                                                                                     "slidesToShow": 4
+                                                                                                                                                                   }
+                                                                                                                                                                 }, {
+                                                                                                                                                                 "breakpoint": 992,
+                                                                                                                                                                   "settings": {
+                                                                                                                                                                     "slidesToShow": 3
+                                                                                                                                                                   }
+                                                                                                                                                                 }, {
+                                                                                                                                                                 "breakpoint": 768,
+                                                                                                                                                                 "settings": {
+                                                                                                                                                                   "slidesToShow": 2
+                                                                                                                                                                 }
+                                                                                                                                                                 }, {
+                                                                                                                                                                 "breakpoint": 554,
+                                                                                                                                                                 "settings": {
+                                                                                                                                                                   "slidesToShow": 1
+                                                                                                                                                                 }
+                                                                                                                                                               }]
+                                                                                                                                                             }'>
                         <!-- Article -->
                         @foreach ($categories as $category)
                             <article class="js-slide pt-2">
@@ -130,78 +131,9 @@
         <!-- End Popular Categories Section -->
 
         <!-- Apps Section -->
-        <div class="container space-bottom-2 space-bottom-lg-3">
+        <div class="container space-bottom-2 space-bottom-lg-3 p-0">
             <div class="row">
-                <div class="col-lg-3 mb-5 mb-lg-0">
-                    <div class="mr-lg-3">
-                        <!-- Navbar -->
-                        <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
-                            <!-- Responsive Toggle Button -->
-                            <button type="button" class="navbar-toggler btn btn-block border py-3"
-                                aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNav"
-                                data-toggle="collapse" data-target="#sidebarNav">
-                                <span class="d-flex justify-content-between align-items-center">
-                                    <span class="h5 mb-0">View all categories</span>
-                                    <span class="navbar-toggler-default">
-                                        <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill="currentColor"
-                                                d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z" />
-                                        </svg>
-                                    </span>
-                                    <span class="navbar-toggler-toggled">
-                                        <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill="currentColor"
-                                                d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z" />
-                                        </svg>
-                                    </span>
-                                </span>
-                            </button>
-                            <!-- End Responsive Toggle Button -->
-
-                            <div id="sidebarNav" class="collapse navbar-collapse">
-                                <div class="p-2 p-lg-0">
-                                    <div class="mt-3 mt-lg-0">
-                                        <h2 class="h4">Explore</h2>
-
-                                        <!-- Nav Link -->
-                                        <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                            href="#">
-                                            All
-                                            <span class="badge border badge-pill">30+</span>
-                                        </a>
-                                        <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                            href="#">
-                                            Top rated
-                                        </a>
-                                        <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                            href="#">
-                                            Featured
-                                        </a>
-                                        <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                            href="#">
-                                            Daily tools
-                                        </a>
-                                        <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                            href="#">
-                                            New
-                                            <span class="badge border badge-pill">18</span>
-                                        </a>
-                                        <a class="dropdown-item d-flex justify-content-between align-items-center px-0"
-                                            href="#">
-                                            Channels
-                                        </a>
-                                        <!-- End Nav Link -->
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Navbar -->
-                    </div>
-                </div>
-
-                <div class="col-lg-9 column-divider-lg">
+                <div class="col-lg-12">
                     <div class="ml-lg-2">
                         <div class="row mx-n2 mb-7">
 
@@ -209,8 +141,16 @@
                                 <div class="col-sm-6 col-md-4 px-2 mb-3">
                                     <!-- Card -->
                                     <a class="card card-frame h-100" href="/careers/{{ $post->slug }}">
-                                        <img class="card-img-top" src="template-assets/img/480x220/img1.jpg"
-                                            alt="Image Description">
+
+                                        @if ($post->image)
+                                            <img class="card-img-top" src="{{ asset('storage/' . $post->image) }}"
+                                                alt="{{ $post->name }}">
+                                        @else
+                                            <img class="card-img-top"
+                                                src="https://source.unsplash.com/260x119?{{ $post->category->name }}"
+                                                alt="{{ $post->name }}">
+                                        @endif
+
                                         <div class="card-body">
                                             <div class="d-flex align-items-center mb-1">
                                                 <span class="d-block text-dark font-weight-bold">{{ $post->title }}</span>

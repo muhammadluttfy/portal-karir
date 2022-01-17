@@ -54,6 +54,32 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="salary" class="form-label">Salary / year</label>
+                    <input type="text" class="form-control @error('salary') is-invalid @enderror" name="salary" id="salary"
+                        required autofocus value="{{ old('salary') }}">
+                    <div id="salaryHelp" class="form-text">Masukkan hanya angka, satuan oleh sistem adalah JT.</div>
+
+                    @error('salary')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+
+                <div class="mb-3">
+                    <label for="salary_source" class="form-label">Salary Source</label>
+                    <input type="text" class="form-control @error('salary_source') is-invalid @enderror"
+                        name="salary_source" id="salary_source" required autofocus value="{{ old('salary_source') }}">
+                    <div id="salarySourceHelp" class="form-text">Masukkan Referensi Gaji Rata - Rata.</div>
+
+                    @error('salary_source')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+
+                <div class="mb-3">
                     <label for="image" class="form-label">Post Image</label>
                     <img class="img-preview img-fluid mb-3 col-sm-5">
                     <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"
