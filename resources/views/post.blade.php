@@ -28,19 +28,7 @@
             <div class="col-md-4 col-lg-3 mb-9 mb-md-0">
                 <!-- App Info -->
                 <div class="mr-lg-2">
-                    <div class="mb-7">
-                        <div class="card-frame rounded text-center mx-auto mb-3">
-                            @if ($post->image)
-                                <img class="img-fluid" src="{{ asset('storage/' . $post->image) }}"
-                                    alt="Image Description" width="130">
-                            @else
-                                <img class="img-fluid" src="https://source.unsplash.com/{{ $post->category->name }}"
-                                    alt="Image Description" width="130">
-                            @endif
-                        </div>
 
-                        {{-- <a class="btn btn-sm btn-block btn-primary transition-3d-hover" href="#">Install Now</a> --}}
-                    </div>
 
 
                     <div class="d-none d-md-block mb-7">
@@ -85,9 +73,7 @@
             <div class="col-md-8 col-lg-9 column-divider-md">
                 <div class="ml-lg-2">
                     <div class="mb-5">
-                        <h2>{{ $post->title }} <img class="ml-1"
-                                src="/template-assets/svg/illustrations/top-vendor.svg" alt="Image Description"
-                                title="Top Vendor" width="20"></h2>
+                        <h2>{{ $post->title }} </h2>
                     </div>
 
                     <!-- Nav Classic -->

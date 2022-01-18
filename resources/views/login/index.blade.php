@@ -36,9 +36,10 @@
 
                 <!-- Form Group -->
                 <div class="js-form-message form-group">
-                    <label class="input-label @error('email') is-invalid @enderror" for="email">Email address</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email address"
-                        aria-label="Email address" required data-msg="Please enter a valid email address.">
+                    <label class="input-label" for="email">Email address</label>
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email"
+                        placeholder="Email address" aria-label="Email address" required
+                        data-msg="Please enter a valid email address.">
                     @error('email')
                         <div class="invalid-feedback mb-2">
                             {{ $message }}
@@ -52,8 +53,8 @@
                     <label class="input-label" for="signinSrPassword">
                         <span class="d-flex justify-content-between align-items-center">
                             Password
-                            <a class="link-underline text-capitalize font-weight-normal"
-                                href="recover-account-simple.html">Forgot Password?</a>
+                            <a class="link-underline text-capitalize font-weight-normal" href="javascript:;">Forgot
+                                Password?</a>
                         </span>
                     </label>
                     <input type="password" class="form-control" name="password" id="signinSrPassword"

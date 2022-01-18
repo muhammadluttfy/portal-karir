@@ -42,11 +42,14 @@ Route::get('/about', function () {
 Route::get('/careers', [PostController::class, 'index'])->name('careers');
 Route::get('careers/{post:slug}', [PostController::class, 'show']);
 
-Route::get('/categories', function () {
+Route::get('/categories', function (Post $post) {
   return view('categories', [
-    'title' => 'Post Categories',
+    'title' => 'All Categories',
     'active' => 'categories',
-    'categories' => Category::all()
+    'categories' => Category::all(),
+    'posts' => Post::latest()->filter(request(['search', 'category', 'author']))
+      ->paginate(9)->withQueryString(),
+    'post_count' => $post,
   ]);
 });
 
@@ -54,7 +57,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'autenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest')->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', function () {

@@ -6,7 +6,7 @@
         <!-- Hero Section -->
         <div class="container space-top-1">
             <div class="bg-primary rounded"
-                style="background: url(/template-assets/svg/illustrations/book-portalkarir.svg) right bottom no-repeat;">
+                style="background: url(/template-assets/svg/illustrations/book-blank.svg) right bottom no-repeat;">
                 <div class="w-lg-50">
                     <div class="py-8 px-6">
                         <h1 class="display-4 text-white">Katalog Karir</h1>
@@ -66,30 +66,37 @@
                                         @foreach ($posts as $post)
                                             <div class="col-sm-6 col-md-4 px-2 mb-3">
                                                 <!-- Card -->
-                                                <a class="card card-frame h-100" href="/careers/{{ $post->slug }}">
+                                                <div class="card card-frame h-100" href="/careers/{{ $post->slug }}">
 
-                                                    @if ($post->image)
-                                                        <img class="card-img-top"
-                                                            src="{{ asset('storage/' . $post->image) }}"
-                                                            alt="{{ $post->name }}">
-                                                    @else
-                                                        <img class="card-img-top"
-                                                            src="https://source.unsplash.com/260x119?{{ $post->category->name }}"
-                                                            alt="{{ $post->name }}">
-                                                    @endif
+                                                    <a href="/careers/{{ $post->slug }}">
+                                                        @if ($post->image)
+                                                            <img class="card-img-top"
+                                                                src="{{ asset('storage/' . $post->image) }}"
+                                                                alt="{{ $post->name }}">
+                                                        @else
+                                                            <img class="card-img-top"
+                                                                src="https://source.unsplash.com/260x119?{{ $post->category->name }}"
+                                                                alt="{{ $post->name }}">
+                                                        @endif
+                                                    </a>
 
                                                     <div class="card-body">
-                                                        <div class="d-flex align-items-center mb-1">
-                                                            <span
-                                                                class="d-block text-dark font-weight-bold">{{ $post->title }}</span>
-                                                            <img class="ml-2"
-                                                                src="template-assets/svg/illustrations/top-vendor.svg"
-                                                                alt="Image Description" title="Top Vendor" width="16">
+                                                        <div class="d-flex align-items-center justify-content-between mb-1">
+                                                            <a href="/careers/{{ $post->slug }}">
+                                                                <span class="d-block text-dark font-weight-bold">
+                                                                    {{ $post->title }}
+                                                                </span>
+                                                            </a>
+                                                            <a href="/careers?category={{ $post->category->slug }}">
+                                                                <span class="badge badge-pill badge-primary">
+                                                                    {{ $post->category->name }}
+                                                                </span>
+                                                            </a>
                                                         </div>
                                                         <span
                                                             class="d-block text-body font-size-1">{{ $post->excerpt }}</span>
                                                     </div>
-                                                </a>
+                                                </div>
                                                 <!-- End Card -->
                                             </div>
                                         @endforeach

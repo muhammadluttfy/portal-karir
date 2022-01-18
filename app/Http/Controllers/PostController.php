@@ -9,7 +9,7 @@ use App\Models\User;
 
 class PostController extends Controller
 {
-  public function index(Post $post)
+  public function index(Post $post, Category $category)
   {
     $title = [];
 
@@ -29,7 +29,7 @@ class PostController extends Controller
       "posts" => Post::latest()->filter(request(['search', 'category', 'author']))
         ->paginate(9)->withQueryString(),
       'categories' => Category::all(),
-      'post' => $post
+      'post' => $post,
     ]);
   }
 

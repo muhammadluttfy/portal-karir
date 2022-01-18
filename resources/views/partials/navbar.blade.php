@@ -115,7 +115,6 @@
                             <div id="searchClassic"
                                 class="hs-unfold-content dropdown-menu w-100 shadow border-0 rounded-0 px-3 mt-0">
                                 <form action="/careers" class="input-group input-group-sm input-group-merge">
-
                                     @if (request('category'))
                                         <input type="hidden" name="category" value="{{ request('category') }}">
                                     @endif
@@ -124,14 +123,15 @@
                                         <input type="hidden" name="author" value="{{ request('author') }}">
                                     @endif
 
-                                    <input type="text" class="form-control" placeholder="What do you want to learn?"
-                                        aria-label="What do you want to learn?">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <i class="fas fa-search"></i>
-                                        </div>
+                                    <label class="sr-only" for="search">What do you want to learn?</label>
+                                    <div class="d-inline-block w-75 mr-2">
+                                        <input type="tesxt" class="form-control" name="search" id="search"
+                                            placeholder="What do you want to learn?"
+                                            aria-label="What do you want to learn?">
                                     </div>
-
+                                    <button type="submit" class="btn btn-primary">
+                                        <span class="fas fa-search"></span>
+                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -139,13 +139,11 @@
 
                         <!-- Login Button -->
                         <div class="d-inline-block ml-auto">
-                            <button type="button"
-                                class="btn btn-sm btn-primary d-none d-lg-inline-block transition-3d-hover"
-                                data-toggle="modal" data-target="#loginModal">Get Started</button>
-                            <button type="button" class="btn btn-xs btn-icon rounded-circle d-lg-none"
-                                data-toggle="modal" data-target="#loginModal">
+                            <a href="{{ route('login') }}"
+                                class="btn btn-sm btn-primary d-none d-lg-inline-block transition-3d-hover">Sign In</a>
+                            <a href="{{ route('login') }}" class="btn btn-xs btn-icon rounded-circle d-lg-none">
                                 <i class="fas fa-user-circle"></i>
-                            </button>
+                            </a>
                         </div>
                         <!-- End Login Button -->
                     </div>
@@ -200,14 +198,6 @@
                                         <div id="navSubmenuCoursesDevelopment" class="hs-sub-menu dropdown-menu"
                                             aria-labelledby="navLinkCoursesDevelopment" style="min-width: 270px;">
                                             <a class="dropdown-item" href="#">Comingsoon :)</a>
-                                            {{-- <a class="dropdown-item" href="#">All Web Development</a>
-                                            <a class="dropdown-item" href="#">Web Development</a>
-                                            <a class="dropdown-item" href="#">Mobile apps</a>
-                                            <a class="dropdown-item" href="#">Programming languages</a>
-                                            <a class="dropdown-item" href="#">Game development</a>
-                                            <a class="dropdown-item" href="#">Databases</a>
-                                            <a class="dropdown-item" href="#">Software testing</a>
-                                            <a class="dropdown-item" href="#">Other</a> --}}
                                         </div>
                                     </div>
                                     <!-- End Topic -->
@@ -226,24 +216,6 @@
 
                             <!-- Search Form -->
                             <li class="d-none d-lg-inline-block navbar-nav-item flex-grow-1 mx-2">
-                                {{-- <form action="/careers" class="input-group input-group-sm input-group-merge w-75">
-                                    @if (request('category'))
-                                        <input type="hidden" name="category" value="{{ request('category') }}">
-                                    @endif
-
-                                    @if (request('author'))
-                                        <input type="hidden" name="author" value="{{ request('author') }}">
-                                    @endif
-
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <i class="fa fa-search"></i>
-                                        </div>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="What do you want to learn?"
-                                        aria-label="What do you want to learn?">
-                                    <button class="btn" type="submit">Search</button>
-                                </form> --}}
 
                                 <form action="/careers" lass="js-validate d-flex align-items-center">
 
@@ -272,14 +244,13 @@
                             <li class="hs-has-sub-menu navbar-nav-item mr-lg-auto">
                                 <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
                                     href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                    aria-labelledby="pagesSubMenu">Pages</a>
+                                    aria-labelledby="pagesSubMenu">Learn more</a>
 
                                 <!-- Pages - Submenu -->
                                 <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="pagesMegaMenu"
                                     style="min-width: 230px;">
-                                    <a class="dropdown-item" href="courses-listing.html">Courses</a>
-                                    <a class="dropdown-item" href="course-description.html">Course description</a>
-                                    <a class="dropdown-item" href="author.html">Author</a>
+                                    <a class="dropdown-item" href="javascript:;">About Me</a>
+                                    <a class="dropdown-item" href="javascript:;">Contact Us</a>
                                 </div>
                                 <!-- End Pages - Submenu -->
                             </li>

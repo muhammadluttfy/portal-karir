@@ -4,41 +4,44 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Category;
 
 
 class LoginController extends Controller
 {
-    public function index()
-    {
-        return view('login.index', [
-            'title' => 'Login',
-            'active' => 'login'
-        ]);
+  public function index()
+  {
+    return view('login.index', [
+      'title' => 'Login',
+      'active' => 'login',
+
+      'categories' => Category::all(),
+    ]);
+  }
+
+  public function autenticate(Request $request)
+  {
+    $credentials = $request->validate([
+      'email' => 'required|email:dns',
+      'password' => 'required'
+    ]);
+
+    if (Auth::attempt($credentials)) {
+      $request->session()->regenerate();
+      return redirect()->intended('/dashboard');
     }
 
-    public function autenticate(Request $request)
-    {
-        $credentials = $request->validate([
-            'email' => 'required|email:dns',
-            'password' => 'required'
-        ]);
+    return back()->with('loginError', 'Please try again.');
+  }
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('/dashboard');
-        }
+  public function logout()
+  {
+    Auth::logout();
 
-        return back()->with('loginError', 'Please try again.');
-    }
+    request()->session()->invalidate();
 
-    public function logout()
-    {
-        Auth::logout();
+    request()->session()->regenerateToken();
 
-        request()->session()->invalidate();
-
-        request()->session()->regenerateToken();
-
-        return redirect('/');
-    }
+    return redirect('/');
+  }
 }
