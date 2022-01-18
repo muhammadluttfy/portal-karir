@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                         @empty
-                            <p class="text-danger">Tidak ada rekomendasi tool</p>
+                            <p class="text-danger">Belum ada rekomendasi tool</p>
                         @endforelse
                         <!-- End Card -->
                     </div>

@@ -32,10 +32,9 @@ class DatabaseSeeder extends Seeder
       'name' => 'Ahla Ainin Nafisah',
       'username' => 'ahlaainin',
       'email' => 'ahlaainin@gmail.com',
-      'password' => bcrypt('password')
+      'password' => bcrypt('password'),
+      'is_admin' => 0,
     ]);
-
-    User::factory(3)->create();
 
     Category::create([
       'name' => 'Development',
@@ -116,6 +115,6 @@ class DatabaseSeeder extends Seeder
       'basic_learning' => 'Website',
     ]);
 
-    Post::factory(50)->create();
+    // Post::factory(50)->create();
   }
 }

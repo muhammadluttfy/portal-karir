@@ -31,14 +31,20 @@
             }'>
                             <a id="docsMegaMenu"
                                 class="hs-mega-menu-invoker nav-link nav-link-toggle font-size-1 py-2 pr-0"
-                                href="javascript:;" aria-haspopup="true" aria-expanded="false">Documentation</a>
+                                href="javascript:;" aria-haspopup="true" aria-expanded="false">
+                                @auth
+                                    Masuk ke dashboard
+                                @else
+                                    Bantuan
+                                @endauth
+                            </a>
 
                             <!-- Docs - Submenu -->
                             <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu"
                                 style="min-width: 330px;">
                                 <!-- Promo Item -->
                                 <div class="navbar-promo-item">
-                                    <a class="navbar-promo-link" href="documentation/index.html">
+                                    <a class="navbar-promo-link" href="{{ route('term-and-conditions') }}">
                                         <div class="media align-items-center">
                                             <img class="navbar-promo-icon" src="/template-assets/svg/icons/icon-2.svg"
                                                 alt="SVG">
@@ -59,23 +65,37 @@
                                 <div class="navbar-promo-footer">
                                     <!-- List -->
                                     <div class="row no-gutters">
-                                        <div class="col-6">
-                                            <div class="navbar-promo-footer-item">
-                                                <span class="navbar-promo-footer-text">Check what's new</span>
-                                                <a class="navbar-promo-footer-text" href="documentation/changelog.html">
-                                                    Changelog
-                                                </a>
+                                        @auth
+                                            <div class="col-6">
+                                                <div class="navbar-promo-footer-item">
+                                                    <span class="navbar-promo-footer-text">hallo
+                                                        {{ auth()->user()->username }}</span>
+                                                    <a class="navbar-promo-footer-text" href="{{ route('dashboard') }}">
+                                                        Masuk ke Dashboard
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-6 navbar-promo-footer-ver-divider">
-                                            <div class="navbar-promo-footer-item">
-                                                <span class="navbar-promo-footer-text">Have a question?</span>
-                                                <a class="navbar-promo-footer-text"
-                                                    href="http://htmlstream.com/contact-us">
-                                                    Contact us
-                                                </a>
+
+                                            <div class="col-6 navbar-promo-footer-ver-divider">
+                                                <div class="navbar-promo-footer-item">
+                                                    <span class="navbar-promo-footer-text">Hubungi kami untuk ikut
+                                                        berkontribusi</span>
+                                                    <a class="navbar-promo-footer-text" href="https://wa.me/6282340378657">
+                                                        Join Team
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        @else
+                                            <div class="col-12 navbar-promo-footer-ver-divider">
+                                                <div class="navbar-promo-footer-item">
+                                                    <span class="navbar-promo-footer-text">Hubungi kami untuk ikut
+                                                        berkontribusi</span>
+                                                    <a class="navbar-promo-footer-text" href="https://wa.me/6282340378657">
+                                                        Join Team
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        @endauth
                                     </div>
                                     <!-- End List -->
                                 </div>
@@ -139,11 +159,27 @@
 
                         <!-- Login Button -->
                         <div class="d-inline-block ml-auto">
-                            <a href="{{ route('login') }}"
-                                class="btn btn-sm btn-primary d-none d-lg-inline-block transition-3d-hover">Sign In</a>
-                            <a href="{{ route('login') }}" class="btn btn-xs btn-icon rounded-circle d-lg-none">
-                                <i class="fas fa-user-circle"></i>
-                            </a>
+                            @auth
+
+                                <form action="/logout" method="POST">
+                                    @csrf
+
+                                    <button type="submit""
+                                                class="
+                                        
+                                         btn btn-sm btn-primary d-none d-lg-inline-block transition-3d-hover">Sign
+                                        Out</button>
+                                    <button type="submit"" class="   btn btn-xs btn-icon rounded-circle d-lg-none">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                    </button>
+                                </form>
+                            @else
+                                <a href="{{ route('login') }}"
+                                    class="btn btn-sm btn-primary d-none d-lg-inline-block transition-3d-hover">Sign In</a>
+                                <a href="{{ route('login') }}" class="btn btn-xs btn-icon rounded-circle d-lg-none">
+                                    <i class="fas fa-user-circle"></i>
+                                </a>
+                            @endauth
                         </div>
                         <!-- End Login Button -->
                     </div>
@@ -244,13 +280,13 @@
                             <li class="hs-has-sub-menu navbar-nav-item mr-lg-auto">
                                 <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle"
                                     href="javascript:;" aria-haspopup="true" aria-expanded="false"
-                                    aria-labelledby="pagesSubMenu">Learn more</a>
+                                    aria-labelledby="pagesSubMenu">Selengkapnya</a>
 
                                 <!-- Pages - Submenu -->
                                 <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="pagesMegaMenu"
                                     style="min-width: 230px;">
-                                    <a class="dropdown-item" href="javascript:;">About Me</a>
-                                    <a class="dropdown-item" href="javascript:;">Contact Us</a>
+                                    <a class="dropdown-item" href="javascript:;">Tentang Kami</a>
+                                    <a class="dropdown-item" href="javascript:;">Kontak Kami</a>
                                 </div>
                                 <!-- End Pages - Submenu -->
                             </li>

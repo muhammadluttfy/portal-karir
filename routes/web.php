@@ -29,15 +29,13 @@ Route::get('/', function () {
   ]);
 })->name('welcome');
 
-Route::get('/about', function () {
-  return view('about', [
-    "title" => "About",
-    "active" => "about",
-    "name" => "Muhammad Lutfi",
-    "email" => "muhammad@gmail.com",
-    "image" => "lutfi.jpg",
+Route::get('/term-and-conditions', function () {
+  return view('term-conditions', [
+    "title" => "Term & Conditions and FaQ",
+    "active" => "term-and-conditions",
+    'categories' => Category::all(),
   ]);
-});
+})->name('term-and-conditions');
 
 Route::get('/careers', [PostController::class, 'index'])->name('careers');
 Route::get('careers/{post:slug}', [PostController::class, 'show']);
@@ -62,7 +60,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', function () {
   return view('dashboard.index');
-})->middleware('auth');
+})->name('dashboard')->middleware('auth');
 
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');

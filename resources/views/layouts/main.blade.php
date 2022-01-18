@@ -272,6 +272,11 @@
     <script src="/template-assets/vendor/typed.js/lib/typed.min.js"></script>
     <script src="/template-assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
     <script src="/template-assets/vendor/slick-carousel/slick/slick.js"></script>
+    <script src="/template-assets/vendor/hs-scroll-nav/dist/hs-scroll-nav.min.js"></script>
+    <script src="/template-assets/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
+
+
+
 
     <!-- JS Front -->
     <script src="/template-assets/js/hs.core.js"></script>
@@ -287,6 +292,11 @@
 
             // initialization of mega menu
             var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
+
+            // initialization of scroll nav
+            $('.js-scroll-nav').each(function() {
+                var scrollNav = new HSScrollNav($(this)).init();
+            });
 
             // initialization of unfold
             var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
@@ -324,6 +334,11 @@
             // initialization of slick carousel
             $('.js-slick-carousel').each(function() {
                 var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+            });
+
+            // initialization of show animations
+            $('.js-animation-link').each(function() {
+                var showAnimation = new HSShowAnimation($(this)).init();
             });
 
             // initialization of go to
