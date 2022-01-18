@@ -59,7 +59,8 @@
                         <!-- Logo -->
                         <div class="mb-4">
                             <a href="index.html" aria-label="Front">
-                                <img class="brand" src="/template-assets/svg/logos/logo.svg" alt="Logo">
+                                <img class="brand" src="/template-assets/img/logos/portalkarir.svg"
+                                    alt="Logo Portal Karir">
                             </a>
                         </div>
                         <!-- End Logo -->

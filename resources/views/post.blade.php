@@ -115,7 +115,7 @@
                                 {!! $post->body !!}
                             </div>
 
-                            <div class="description-content">
+                            {{-- <div class="description-content">
                                 <p class="decrtiption-heading">Required Skills</p>
 
                                 <ul class="text-body pl-4 mb-5">
@@ -123,7 +123,7 @@
                                     <li>Import an existing file from Google Drive into a channel or direct message</li>
                                     <li>Search directly within Google Drive files shared within Slack</li>
                                 </ul>
-                            </div>
+                            </div> --}}
 
                             <div class="description-content">
                                 <p class="decrtiption-heading">Average Salary</p>
