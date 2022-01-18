@@ -97,13 +97,14 @@
                         <ul class="nav nav-sm nav-x-0 flex-column">
                             <li class="nav-item"><a class="nav-link"
                                     href="../pages/about-agency.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../pages/careers.html">Careers
+                            <li class="nav-item"><a class="nav-link" href="{{ route('careers') }}">Careers
                                     <span class="badge badge-primary ml-1">new</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="../blog/newsroom.html">Blog</a>
+                            <li class="nav-item"><a class="nav-link" href="https://semuabisa.web.id"
+                                    target="_blank">Blog</a>
                             </li>
                             <li class="nav-item"><a class="nav-link"
                                     href="../pages/customers.html">Customers</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../pages/hire-us.html">Hire
+                            <li class="nav-item"><a class="nav-link" href="javascript:;">Hire
                                     us</a></li>
                         </ul>
                         <!-- End Nav Link -->
@@ -128,10 +129,10 @@
                         <!-- Nav Link -->
                         <ul class="nav nav-sm nav-x-0 flex-column">
                             <li class="nav-item"><a class="nav-link"
-                                    href="mailto:example@gmail.com">Support</a></li>
+                                    href="mailto:creativedevelopment.id@gmail.com">Support</a></li>
                             <li class="nav-item"><a class="nav-link"
-                                    href="documentation/index.html">Docs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../pages/status.html">Status</a>
+                                    href="{{ route('term-and-conditions') }}">Docs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Status</a>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="#">API Reference</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Tech Requirements</a></li>
@@ -153,10 +154,10 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="https://wa.me/6282340378657">
                                     <span class="media align-items-center">
                                         <i class="fa fa-user-circle mr-2"></i>
-                                        <span class="media-body">Gabung dan Beri Kontribusi</span>
+                                        <span class="media-body">Beri Kontribusi</span>
                                     </span>
                                 </a>
                             </li>
@@ -174,11 +175,12 @@
                         <!-- Nav Link -->
                         <ul class="nav nav-sm nav-x-0 align-items-center">
                             <li class="nav-item">
-                                <a class="nav-link" href="../pages/privacy.html">Privacy &amp; Policy</a>
+                                <a class="nav-link" href="{{ Route('term-and-conditions') }}">Privacy &amp;
+                                    Policy</a>
                             </li>
                             <li class="nav-item opacity mx-3">&#47;</li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../pages/terms.html">Terms</a>
+                                <a class="nav-link" href="{{ route('term-and-conditions') }}">Terms</a>
                             </li>
                             <li class="nav-item opacity mx-3">&#47;</li>
                             <li class="nav-item">

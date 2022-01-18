@@ -55,8 +55,8 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'autenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/register', [RegisterController::class, 'index'])->middleware('guest')->name('register');
-Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/register-team-pk', [RegisterController::class, 'index'])->middleware('guest')->name('register');
+Route::post('/register-team-pk', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', function () {
   return view('dashboard.index');

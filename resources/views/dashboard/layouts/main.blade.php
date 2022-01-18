@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | WPU Blog</title>
+    <title>Dashboard - Portal Karir | Berikan kontribusi terbaikmu</title>
 
     {{-- Favicon --}}
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"

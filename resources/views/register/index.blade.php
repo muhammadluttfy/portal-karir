@@ -5,13 +5,13 @@
     <main id="content" role="main">
         <!-- Login Form -->
         <div class="container space-2">
-            <form action="/register" method="POST" class="js-validate w-md-75 w-lg-50 mx-md-auto">
+            <form action="/register-team-pk" method="POST" class="js-validate w-md-75 w-lg-50 mx-md-auto">
                 @csrf
 
                 <!-- Title -->
                 <div class="mb-5 mb-md-7">
-                    <h1 class="h2 mb-0">Welcome to Front</h1>
-                    <p>Fill out the form to get started.</p>
+                    <h1 class="h2 mb-0">Welcome to Portal Karir</h1>
+                    <p>Gabung bersama kami dan berikan kontribusi terbaikmu.</p>
                 </div>
                 <!-- End Title -->
 
@@ -33,7 +33,7 @@
 
                 <!-- Form Group -->
                 <div class="js-form-message form-group">
-                    <label class="input-label @error('username') is-invalid @enderror" for="username">Email address</label>
+                    <label class="input-label @error('username') is-invalid @enderror" for="username">Username</label>
                     <input type="text" class="form-control" name="username" id="username" placeholder="Username"
                         aria-label="Username" required data-msg="Please enter a valid username."
                         value="{{ old('username') }}">

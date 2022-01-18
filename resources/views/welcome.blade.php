@@ -25,7 +25,8 @@
                     </div>
 
                     <div class="d-sm-flex align-items-sm-center flex-sm-wrap">
-                        <a class="btn btn-primary transition-3d-hover mb-2" href="../pages/login.html">Coba sekarang</a>
+                        <a class="btn btn-primary transition-3d-hover mb-2" href="{{ route('careers') }}">Coba
+                            sekarang</a>
 
                         <div class="mx-2"></div>
 
@@ -33,7 +34,7 @@
                         <a class="js-fancybox video-player video-player-btn media align-items-center text-dark mb-2"
                             href="javascript:;"
                             data-hs-fancybox-options='{                                                                                                                                        }
-                                                                                                                                                                                                                                                             }'>
+                                                                                                                                                                                                                                                                     }'>
                             <span class="video-player-icon shadow-soft mr-3">
                                 <i class="fa fa-play"></i>
                             </span>

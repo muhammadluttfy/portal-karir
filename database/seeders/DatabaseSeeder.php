@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
       'name' => 'Muhammad Lutfi',
       'username' => 'muhammadlutfi',
       'email' => 'muhammadlutfi3101@gmail.com',
-      'password' => bcrypt('password'),
+      'password' => bcrypt('@password'),
       'is_admin' => 1,
     ]);
 
@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
       'name' => 'Ahla Ainin Nafisah',
       'username' => 'ahlaainin',
       'email' => 'ahlaainin@gmail.com',
-      'password' => bcrypt('password'),
+      'password' => bcrypt('@password'),
       'is_admin' => 0,
     ]);
 

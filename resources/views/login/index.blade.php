@@ -66,12 +66,13 @@
                 <!-- Button -->
                 <div class="row align-items-center mb-5">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                        <span class="font-size-1 text-muted">Don't have an account?</span>
-                        <a class="font-size-1 font-weight-bold" href="/register">Signup</a>
+                        <span class="font-size-1 text-muted">Belum memiliki akun?</span>
+                        <a class="font-size-1 font-weight-bold" href="https://wa.me/6282340378657">Hubungi kami</a>
+                        <span class="font-size-1 text-muted">untuk bergabung</span>
                     </div>
 
                     <div class="col-sm-6 text-sm-right">
-                        <button type="submit" class="btn btn-primary transition-3d-hover">Get Started</button>
+                        <button type="submit" class="btn btn-primary transition-3d-hover">Sign In</button>
                     </div>
                 </div>
                 <!-- End Button -->
