@@ -42,7 +42,7 @@
                                     <a class="card-body" href="app-description.html">
                                         <div class="media">
                                             <div class="avatar avatar-xs mt-1 mr-3">
-                                                <img class="avatar-img" src="/template-assets/img/160x160/img5.jpg"
+                                                <img class="avatar-img" src="/template-assets/img/160x160/img12.jpg"
                                                     alt="Image Description">
                                             </div>
                                             <div class="media-body">
@@ -84,7 +84,7 @@
                                 aria-selected="true">
                                 <div class="d-md-flex justify-content-md-center align-items-md-center">
                                     <figure class="d-none d-md-block w-100 max-w-5rem mr-3">
-                                        <img class="img-fluid" src="/template-assets/svg/icons/icon-24.svg" alt="SVG">
+                                        <img class="img-fluid" src="/template-assets/svg/icons/icon-2.svg" alt="SVG">
                                     </figure>
                                     Description
                                 </div>
@@ -96,7 +96,7 @@
                                 aria-selected="false">
                                 <div class="d-md-flex justify-content-md-center align-items-md-center">
                                     <figure class="d-none d-md-block w-100 max-w-5rem mr-3">
-                                        <img class="img-fluid" src="/template-assets/svg/icons/icon-22.svg" alt="SVG">
+                                        <img class="img-fluid" src="/template-assets/svg/icons/icon-67.svg" alt="SVG">
                                     </figure>
                                     Cources
                                 </div>
@@ -153,7 +153,7 @@
                                         <div class="card border h-100">
                                             <div class="card-img-top position-relative">
                                                 <img class="card-img-top"
-                                                    src="/template-assets/svg/components/graphics-1.svg"
+                                                    src="/template-assets/svg/components/graphics-5.svg"
                                                     alt="Image Description">
 
                                                 <div class="position-absolute top-0 left-0 mt-3 ml-3">
@@ -205,7 +205,7 @@
                                                         <a class="avatar avatar-xs avatar-circle" data-toggle="tooltip"
                                                             data-placement="top" title="Nataly Gaga" href="#">
                                                             <img class="avatar-img"
-                                                                src="/template-assets/img/100x100/img1.jpg"
+                                                                src="/template-assets/img/100x100/img3.jpg"
                                                                 alt="Image Description">
                                                         </a>
                                                     </div>

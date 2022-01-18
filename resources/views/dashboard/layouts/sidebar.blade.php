@@ -14,12 +14,6 @@
                     My Post
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }} " href="/dashboard/posts">
-                    <span data-feather="grid"></span>
-                    Post Tool
-                </a>
-            </li>
         </ul>
 
 
