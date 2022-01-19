@@ -42,7 +42,7 @@
                                     <a class="card-body" href="app-description.html">
                                         <div class="media">
                                             <div class="avatar avatar-xs mt-1 mr-3">
-                                                <img class="avatar-img" src="/template-assets/img/160x160/img12.jpg"
+                                                <img class="avatar-img" src="/template-assets/img/160x160/img12.png"
                                                     alt="Image Description">
                                             </div>
                                             <div class="media-body">
@@ -152,8 +152,7 @@
                                         <!-- Article -->
                                         <div class="card border h-100">
                                             <div class="card-img-top position-relative">
-                                                <img class="card-img-top"
-                                                    src="/template-assets/svg/components/graphics-5.svg"
+                                                <img class="card-img-top" src="/img/thumbnails/{{ $course->thumbnail }}"
                                                     alt="Image Description">
 
                                                 <div class="position-absolute top-0 left-0 mt-3 ml-3">
@@ -231,7 +230,7 @@
 
                                                     </div>
                                                     <a class="btn btn-sm btn-primary transition-3d-hover"
-                                                        href="course-description.html">Belajar Sekarang</a>
+                                                        href="javascript:;">Belajar Sekarang</a>
                                                 </div>
                                             </div>
                                         </div>

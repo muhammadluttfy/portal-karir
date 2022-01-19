@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
     ]);
 
     Category::create([
-      'name' => 'Finance & Aounting',
+      'name' => 'Finance & Accounting',
       'slug' => 'finance-and-accounting',
       'icon' => 'fa fa-wallet',
     ]);
@@ -65,8 +65,8 @@ class DatabaseSeeder extends Seeder
       'icon' => 'fa fa-pencil-ruler',
     ]);
     Category::create([
-      'name' => 'Marketing',
-      'slug' => 'marketing',
+      'name' => 'Data Analyst',
+      'slug' => 'data-analyst',
       'icon' => 'fa fa-mail-bulk',
     ]);
     Category::create([
@@ -99,6 +99,7 @@ class DatabaseSeeder extends Seeder
       'author' => 'Web Programming Unpas',
       'lisence' => 'Gratis',
       'basic_learning' => 'Youtube',
+      'thumbnail' => 'wpu.png',
     ]);
 
     Course::create([
@@ -106,6 +107,7 @@ class DatabaseSeeder extends Seeder
       'author' => 'Buildwith Angga',
       'lisence' => 'Berbayar',
       'basic_learning' => 'Website',
+      'thumbnail' => 'bwa.png',
     ]);
 
     Course::create([
@@ -113,6 +115,7 @@ class DatabaseSeeder extends Seeder
       'author' => 'Dicoding Indonesia',
       'lisence' => 'Gratis',
       'basic_learning' => 'Website',
+      'thumbnail' => 'dicoding.png',
     ]);
 
     // Post::factory(50)->create();

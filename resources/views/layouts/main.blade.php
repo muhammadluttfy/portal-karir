@@ -43,7 +43,8 @@
             <h2>Share ke teman kamu</h2>
             <p>Bagikan informasi ini agar temanmu dan orang lain dapat mengupgrade skillnya.</p>
             <span class="d-block mt-5">
-                <a class="btn btn-primary transition-3d-hover" href="whatsapp://send?text=www.google.com">Share
+                <a class="btn btn-primary transition-3d-hover"
+                    href="whatsapp://send?text=https://portalkarir.semuabisa.web.id/">Share
                     ke teman</a>
             </span>
         </div>
